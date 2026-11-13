@@ -1,10 +1,13 @@
-option = input("Welcome to the Becker-Arjun Word and Statistics Sorter! Type 'math' for statistics or type word for word sorter. Type 'exit' to exit the program."e
+on = True
+while on:
+    option = input("Welcome to the Becker-Arjun Word and Statistics Sorter! Type 'math' for statistics or type word for word sorter. Type 'exit' to exit the program."e
 if option == "math":
     num_stats()
 elif option == "word":
     word_sorter()
 elif option == "exit":
     print("Goodbye!")
+    on = False
 else:
     option= input("Please type only 'math', 'word', or 'exit', please.")
 i the program."e)
@@ -20,136 +23,128 @@ def give_name(name):
     print(name)
 _list = []
 hhhhhh
-def num_stats():
+def m_stats():
 
 
-    # Reminder for later of stuff:
-    # mean, median, range, mode
-    # interquartile range
-    # variance and standard deviation
-    # min and max
-    # skew and mean absolute deviation
+    # Reminder for    er of stuff:
+    # mean, med     range, mode
+    # int    artile range
+    # variance and st    rd deviation
+      min and max
+    # skew and mean abs    e deviation
 
-    amount = int(input("How many numbers would you like to enter? "))
-    if amount > 0 and amount.is_integer == True:
-        pass
-    else:
-        print("Enter an integer above 0.")
+    amount = int(input("How many numbers would you li    o enter? "))
+    if amount > 0 and amount.is_        == Tr                     else:
+        print("Enter an in        o                
         
-        
-    for _ in range(amount):
-        a = float(input("Enter a number: "))
-        num_list.append(a)
+    for _ i        amount):
+        a = float(input("Ent        ber: "))
+        num    t.append(a)
 
-    sorted_num_list = sorted(num_list)
-    length_of_list = int(len(num_list))
+    sorted_num_list =     ed(num_list)
+    length_of_list = int    (num_list))
 
-    mean = sum(num_list)/length_of_list
-    median = (sorted_num_list[length_of_list // 2] + sorted_num_list[(length_of_list - 1) // 2]) / 2
-    mode = None
-    max_count = 0
-    for item in set(num_list):
-        count = num_list.count(item)
-        if count > max_count:
-            max_count = count
+    mean = sum(num_list    ngth_of_list
+    median = (sorted_num_list[length_of_list // 2] + sorted_num_list[(length_of_list    ) // 2]) / 2     mode = None
+     ax_count = 0
+    for item i        m_list):
+        count = num_        nt(item)
+        if cmat:
+            count
             mode = item
-    if max_count == 1:
-        mode = 'None'
-    range_of_nums_list = max(num_list) - min(num_list)
+    if        nt == 1:
+         ode = 'None'
+    range_of_nums_list = max(num_list) -     num_list)
 
 
 
-    mid_point = (max(num_list) + min(num_list)) / 2
-    mid = length_of_list // 2
-    first_half_list = sorted_num_list[:mid]
-    second_half_list = sorted_num_list[mid:]
-    median1 = (first_half_list[len(first_half_list) // 2] + first_half_list[(len(first_half_list) - 1) // 2]) / 2
-    median2 = (second_half_list[len(second_half_list) // 2] + second_half_list[(len(second_half_list) - 1) // 2]) / 2
-    interquartile_range = abs(median1 - median2)
+    mid_point = (max(num_list) + mi    m_list)) / 2
+    mid = len    of_list // 2
+    first_half_list = sorte    m_list[:mid]
+    second_half_list = sorte    m_list[mid:]
+    median1 = (first_half_list[len(first_half_list) // 2] + first_half_list[(len(first_half_list)    ) // 2]) / 2
+    median2 = (second_half_list[len(second_half_list) // 2] + second_half_list[(len(second_half_list)    ) // 2]) / 2
+    interquartile_range = abs(med     - median2)
 
-    for num in num_list:
-        b = (num - mean) ** 2
-        variance_list.append(b)
-    p_variance = sum(variance_list) / length_of_list
-    s_variance = sum(variance_list) / ( length_of_list - 1 )
+    for         um_list:
+        b = (        an) ** 2
+        varianc    st.append(b)
+    p_variance = sum(variance_list)     ngth_of_list
+    s_variance = sum(variance_list) / ( lengt    _list - 1 )
 
-    standard_deviation = p_variance ** 0.5
-    if mean == 0:
-        coefficient_of_variation = None
-    else:
-        coefficient_of_variation = standard_deviation / mean
+    standard_deviation = p    iance ** 0.5
+         an == 0:
+        coefficient_of_    ation            else:
+        coefficient_of_variation = standard_d    tion / mean
 
-    for num in num_list:
-        c = abs(num - mean)
-        mean_absolute_deviation.append(c)
-    mean_absolute_deviation_amount = sum(mean_absolute_deviation) / len(mean_absolute_deviation)
-
+    for         um_list:
+        c =         - mean)
+        mean_absolute_dev    on.append(c)
+    mean_absolute_deviation_amount = sum(mean_absolute_deviation) / len(mean_absolut    viation)
 
 
 
-    print(f"Mean: {mean}")
-    print(f"Median {median}")
-    print(f"Mode: {mode}")
-    print(f"Range: {range_of_nums_list}")
-    print(f"Midpoint: {mid_point}")
-    print(f"Max: {max(num_list)}")
-    print(f"Min: {min(num_list)}")
-    print(f"Sum: {sum(num_list)}")
-    print(f"Quartile 1: {median1}")
-    print(f"Quartile 3: {median2}")
-    print(f"Interquartile range: {interquartile_range}")
-    print(f"Population variance: {p_variance}")
-    print(f"Sample variance: {s_variance}")
-    print(f"Standard deviation: {standard_deviation}")
-    if coefficient_of_variation is None:
-        print("Coefficient of variation (CV): None")
-    else:
-        print(f"Coefficient of variation (CV): {coefficient_of_variation:.2%}")
+
+    print(    an: {mean}")
+    print(f"M    n {median}")
+    print(    de: {mode}")
+    print(f"Range: {range    nums_list}")
+    print(f"Midpoin    mid_point}")
+    print(f"Max: {    num_list)}")
+    print(f"Min: {    num_list)}")
+    print(f"Sum: {    num_list)}")
+    print(f"Quartil     {median1}")
+    print(f"Quartil     {median2}")
+    print(f"Interquartile range: {interq    ile_range}")
+    print(f"Population variance    _variance}")
+    print(f"Sample variance    _variance}")
+    print(f"Standard deviation: {stand    deviation}")
+    if coefficient_of_va        is None:
+        print("Coefficient of variat    (CV):            else:
+        print(f"Coefficient of variation (CV): {coefficient_of_    ation:.2%}")
     print(f"Mean absolute deviation: {mean_absolute_deviation_amount}")
 
-def word_sorter():
+de    rd_sorte    
     #filler
-    # alphabetical
-    # reverse alphabetical
-    # number of characters
+      alphabetical
+    # reve    alphabetical
+    # numb    f     acters
     
 
-    total_words = int(input("How many words would you like to enter? (Remember enter 1 at a time): "))
-    for _ in range(total_words):
-        d = input("Enter a word: ")
-        word_list.append(d)
+    total_words = int(input("How many words would you like to enter? (Remember enter 1    a time): "))
+    for _ in ran        _words):
+        d = input("        word: ")
+        word    t.    nd(d)
 
     
 
-    alphabetically = sorted(word_list, key=str)
-    reverse_alphabetically = sorted(word_list, reverse=True, key=str)
+    alphabetically = sorted(wor    st, key=str)
+    reverse_alphabetically = sorted(word_list, reverse    e, key=str)
 
-    print(reverse_alphabetically, alphabetically)
+    print(reverse_alphabetically, al    etically)
 
 
 
-    vowels = 'aeiouAEIOU'
-    for word in word_list:
-        amount_consonants = 0
-        amount_vowels = 0
-        for letter in word:
-            if letter in 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM':
-                if letter in vowels:
-                    amount_vowels += 1
-                else:
-                    amount_consonants += 1
+    vowel    'aeiouAEIOU'
+    for wo        rd_list:
+        amoun        ants = 0
+        a        wels = 0
+        for            ord:
+            if letter in 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPAS                
+                if l                                     am                
+                                          amount                
                 
-            if amount_vowels == 0:
-                ratio = 10000000
-            else:
-                ratio = amount_consonants / amount_vowels
+            if amo                
+                            0000
+                 
+                ratio = amount_consonants     ount_vowels
 
-    word_ratios.append([ratio, word])
+    word_ratios.append    tio, word])
 
-    lowest_highest = sorted(word_ratios)
-    highest_lowest = sorted(word_ratios, reverse=True)
+    lowest_highest = sor    word_ratios)
+    highest_lowest = sorted(word_ratio   r    se=True)
    
-    length_of_word
+    length    word
 
 
 
@@ -158,16 +153,11 @@ def word_sorter():
 
 
 
-    print(f"Alphabetically: {alphabetically}")
-    print(f"Reverse alphabetically: {reverse_alphabetically}")
-    print(f"Ratio highest to lowest: {highest_lowest}")
-    print(f"Ratio lowest to highest: {lowest_highest}")
-    print(f"By word length:")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
+    print(f"Alphabetically: {a    betically}")
+    print(f"Reverse alphabetically: {reverse_a    betically}")
+    print(f"Ratio highest to lowest: {h    st_lowest}")
+    print(f"Ratio lowest to highest: {l    t_highest}")
+    print(f"B    rd length:"      print(f""      print(f""      print(f""      print(f"")        nt(f"")
 
         
 num_stats()
